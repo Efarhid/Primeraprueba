@@ -1,6 +1,6 @@
 import openai
 import streamlit as st
-from openai import OpenAI
+#from openai import OpenAI
 
 # Show title and description.
 st.title("💬 Chatbot")
