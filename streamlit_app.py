@@ -11,9 +11,13 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # Inicializar el historial de mensajes en la sesión si no existe
 if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "system", "content": "Eres un psicólogo especializado en temas relacionados al consumo de alcohol en adolescentes"}
-    ]
+ st.session_state.messages = [
+    {"role": "system", "content": (
+        "Actúa como un psicólogo profesional con especialización en prevención y tratamiento del consumo de alcohol en adolescentes. "
+        "Ofrece respuestas empáticas, basadas en evidencia, y orientadas a guiar tanto a jóvenes como a sus familias. "
+        "Responde siempre desde este rol con lenguaje claro y profesional."
+    )}
+]
 
 # Mostrar el historial del chat
 for message in st.session_state.messages:
