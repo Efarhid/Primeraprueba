@@ -40,7 +40,8 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("What is up?"):
 
     # Store and display the current prompt.
-    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.session_state.messages.append({"role": "user", "content": prompt},{"role": "system", "content": " Eres un psicologo especializado en temas relacionados al consumo de alcohol en adolescentes "})
+  
     with st.chat_message("user"):
         st.markdown(prompt)
 
@@ -48,6 +49,7 @@ if prompt := st.chat_input("What is up?"):
     stream = openai.chat.completions.create(
         model="gpt-4.1-nano",
         messages=[
+            {"role": m["role"], "content": m["content"]},
             {"role": m["role"], "content": m["content"]}
             for m in st.session_state.messages
         ],
