@@ -27,15 +27,15 @@ for message in st.session_state.messages:
 # Entrada de mensaje del usuario
 if prompt := st.chat_input("¿Qué te gustaría preguntar?"):
  
-     system_content=(
-          "Actúa como un psicólogo profesional con especialización en prevención y tratamiento del consumo de alcohol en adolescentes. "
-          "Ofrece respuestas empáticas, basadas en evidencia, y orientadas a guiar tanto a jóvenes como a sus familias. "
-          "Responde siempre desde este rol con lenguaje claro y profesional."
-      )
-
-     api_messages = [
-            {"role": "system", "content": system_content}
-        ]
+    system_content=(
+        "Actúa como un psicólogo profesional con especialización en prevención y tratamiento del consumo de alcohol en adolescentes. "
+        "Ofrece respuestas empáticas, basadas en evidencia, y orientadas a guiar tanto a jóvenes como a sus familias. "
+        "Responde siempre desde este rol con lenguaje claro y profesional."
+    )
+   
+    api_messages = [
+          {"role": "system", "content": system_content}
+      ]
 
      # Agregar el mensaje del usuario al historial
     st.session_state.messages.append({"role": "user", "content": prompt})
