@@ -33,7 +33,7 @@ if prompt := st.chat_input("¿Qué te gustaría preguntar?"):
     # Solicitar una respuesta al modelo de OpenAI
     try:
         stream = openai.chat.completions.create(
-            model="gpt-4.0",  # Usa un modelo válido y disponible en tu cuenta
+            model="gpt-4.1-nano",  # Usa un modelo válido y disponible en tu cuenta
             messages=st.session_state.messages,
             stream=True,
         )
