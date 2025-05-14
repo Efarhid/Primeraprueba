@@ -49,7 +49,7 @@ if prompt := st.chat_input("What is up?"):
     stream = openai.chat.completions.create(
         model="gpt-4.1-nano",
         messages=[
-            {"role": m["role"], "content": m["content"]},
+         
             {"role": m["role"], "content": m["content"]}
             for m in st.session_state.messages
         ],
