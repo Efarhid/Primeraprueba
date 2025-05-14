@@ -11,8 +11,8 @@ st.write(
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-openai_api_key = os.getenv('OPENAI_API_KEY')
+#os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 
 
